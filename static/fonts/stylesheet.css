@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'geometrialight';
+    src: url('GEOMETRIA-LIGHT.OTF');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'geometria';
+    src: url('geometria/Geometria.otf');
+    font-style: normal;
+}

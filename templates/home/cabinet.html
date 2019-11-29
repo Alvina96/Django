@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	{% block head %}
+	<title>Личный кабинет</title>
+	{% endblock %}
+</head>
+
+<body>
+    {% block body %}
+	{% load static %}
+	<div class="cabinet-index">
+		<section class="kabinet">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						{% if  profile.avatar %}
+						<div class="kabinet__foto"><img src="{{ profile.avatar.url }}" alt="foto"></div>
+	                    {% else %}
+						<div class="kabinet__foto"><img src="{% static '/img/no-foto.jpg' %}" alt="foto"></div>
+	                    {% endif %}
+						<div class="kabinet__name">
+							{{request.user.username}}
+						</div>
+						<div class="kabinet__nav">
+							<ul>
+								<li><span>Личный кабинет</span></li>
+								<li><a href="#">Личные сообщения</a></li>
+								<li><a href="#">Изменить логин/пароль</a></li>
+								<li><a href="#">Изменить информацию </a></li>
+								<li><a href="#">Подписаться на новости</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4 pl100">
+						<div class="kabinet__contacts">
+							<h4>Контакты: </h4>
+							{% if  profile.phone %}
+							<div class="col-xs-6">
+								<p><img src="{% static '/img/cont-ico.png' %}" alt="ico">{{ profile.phone}}</p>
+							</div>
+							{% endif %}
+							{% if  profile.ts %}
+							<div class="col-xs-6">
+								<p><img src="{% static '/img/cont-ico1.png' %}" alt="ico">{{ profile.ts}}</p>
+							</div>
+							{% endif %}
+							{% if  profile.fb %}
+							<div class="col-xs-6">
+								<p><img src="{% static '/img/cont-ico2.png' %}" alt="ico">{{ profile.fb}}</p>
+							</div>
+							{% endif %}
+							{% if  profile.vk %}
+							<div class="col-xs-6">
+								<p><img src="{% static '/img/cont-ico3.png' %}" alt="ico">{{ profile.vk}}</p>
+							</div>
+							{% endif %}
+							{% if  profile.tw %}
+							<div class="col-xs-6">
+								<p><img src="{% static '/img/cont-ico4.png' %}" alt="ico">{{ profile.tw}}</p>
+							</div>
+							{% endif %}
+							{% if  profile.watsapp %}
+							<div class="col-xs-6">
+								<p><img src="{% static '/img/cont-ico5.png' %}" alt="ico">{{ profile.watsapp}}</p>
+							</div>
+							{% endif %}
+						</div>
+						{% if  profile.description %}
+						<div class="kabinet__about">
+							{{profile.description}}
+						</div>
+						{% endif %}
+					</div>
+					<div class="col-md-5">
+						<div class="kabinet__tovars">
+							<h4>Приобретенные продукты:</h4>
+							<div class="tovar">
+								<div class="tovar__title">Пакеты <span></span></div>
+								<div class="tovar__body">
+									<a href="#"><span>1</span> Как начать продавать игры</a>
+									<a href="#"><span>1</span> Как начать продавать игры летом</a>
+									<a href="#"><span>1</span> Оценка рынка и его возможностей</a>
+								</div>
+							</div>
+							<div class="tovar">
+								<div class="tovar__title">Уроки <span></span></div>
+								<div class="tovar__body">
+									<a href="#"><span>1</span> Как начать продавать игры</a>
+									<a href="#"><span>1</span> Как начать продавать игры летом</a>
+									<a href="#"><span>1</span> Оценка рынка и его возможностей</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+{% endblock%}
+</body>
+</html>

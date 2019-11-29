@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	{% block head %}
+	<title>Пакеты</title>
+	{% endblock %}
+</head>
+<body>
+    {% block body %}
+	{% load static %}
+	<main>
+		<section class="packets">
+			<div class="container">
+				<h2 class="page-title">{{post.title}} <span>{{post.description}}</span></h2>
+				<div class="packets-wrap">
+					<div class="row">
+						{% for packet in packets %}
+						<div class="col-md-6">
+							<div class="packet {{ packet.classname }}">
+								<div class="packet__title">{{ packet.title}} </div>
+								<div class="packet__body">
+									<div class="packet__cost">{{ packet.price}} <span>р.</span></div>
+									<p>{{ packet.description}}</p>
+									<ul>
+										<li> - суждения</li>
+										<li> - сухость </li>
+										<li> - официальность</li>
+									</ul>
+									<div class="packet__btn">
+										<a href="#">Подробнее</a>
+										<a href="#" class="buy-btn">Купить</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	{% endblock%}
+</body>
+</html>

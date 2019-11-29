@@ -1,0 +1,6 @@
+.header__menu ul li a, .modal--reg .tabs-list1 li.tabs-list__item_active1 button, .fancybox-close-small, button, a {
+    outline: none!important;
+}
+.modal.modal--reg {
+    height: 555px;
+}

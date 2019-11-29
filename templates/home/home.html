@@ -1,0 +1,476 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	{% block head %}
+	<title>Главная</title>
+
+	{% endblock %}
+</head>
+
+<body>
+    {% block body %}
+	{% load static %}
+    <div class="wrap">
+    	<main>
+    		<section class="top-block">
+    			<div class="container">
+    				<h1>{{ post.title}}</h1>
+    				<p>{{ post.description }}</p>
+    				<div class="top-block__btn">
+    					<button class="show-lesson">Показать уроки списком</button>
+    					<button class="hide-lesson">Скрыть текст</button>
+    				</div>
+    			</div>
+    		</section>
+    		<section class="content">
+    			<div class="container">
+    				<div class="tree"><img src="{% static '/img/tree.jpg' %}" alt="tree	"></div>
+    				<div class="row">
+    					<div class="col-sm-3">
+    						<div class="tree-item">
+    							<h4>Мониторинг рынка <span></span></h4>
+    							<div class="tree-item__img">
+    								<img src="{% static '/img/item-img.jpg' %}" alt="img">
+    							</div>
+    							<p>Художественный стиль – это особый стиль речи, который получил широкое распространение как в мировой художественной литературе в целом, так и в копирайтинге в частности. текстов и его применение в копирайтинге.</p>
+    							<div class="tree-item__btn">
+    								<button>Подробнее</button>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="col-sm-3">
+    						<div class="tree-item">
+    							<h4>Покупка <span></span></h4>
+    							<div class="tree-item__img">
+    								<img src="{% static '/img/item-img1.jpg' %}" alt="img">
+    							</div>
+    							<p>Художественный стиль – это особый стиль речи, который получил широкое распространение как в мировой художественной литературе в целом, так и в копирайтинге в частности. текстов и его применение в копирайтинге.</p>
+    							<div class="tree-item__btn">
+    								<button>Подробнее</button>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="col-sm-3">
+    						<div class="tree-item">
+    							<h4>Продажа игр <span></span></h4>
+    							<div class="tree-item__img">
+    								<img src="{% static '/img/item-img3.jpg' %}" alt="img">
+    							</div>
+    							<p>Художественный стиль – это особый стиль речи, который получил широкое распространение как в мировой художественной литературе в целом, так и в копирайтинге в частности. текстов и его применение в копирайтинге.</p>
+    							<div class="tree-item__btn">
+    								<button>Подробнее</button>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="col-sm-3">
+    						<div class="tree-item">
+    							<h4>Расширенная схема торговли <span></span></h4>
+    							<div class="tree-item__img">
+    								<img src="{% static '/img/item-img4.jpg' %}" alt="img">
+    							</div>
+    							<p>Художественный стиль – это особый стиль речи, который получил широкое распространение как в мировой художественной литературе в целом, так и в копирайтинге в частности. текстов и его применение в копирайтинге.</p>
+    							<div class="tree-item__btn">
+    								<button>Подробнее</button>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    				<div class="row">
+    					<div class="col-sm-3">
+    						<div class="wrap-info wrap-info--1">
+    							<div class="info-item">
+    								<div class="info-item__title"><img class="loop" src="{% static '/img/loop.png' %}" alt="loop"><img class="loop loop--active" src="{% static '/img/loop-active.png' %}" alt="">Оценка направления индустрии. Выбор игры. <span></span></div>
+    								<div class="info-item__body ">
+    									<div class="info-item-in">
+    										<span>1</span><a href="#leson" class="fancybox">Через магазины <br>и торговые площадки</a>
+    										<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    										<div class="min-les">
+    											<iframe width="160" height="90" src="https://www.youtube.com/embed/W-m5Wq17cp0" frameborder="0" allowfullscreen></iframe>
+    											<p>Художественный стиль – это особый стиль речи, который получил широкое распространение как в мировой художественной литературе в целомкопирайтинге в частности. Он характеризуется высокой эмоциональностью, прямой речью, богатством красок, эпитетов и метафор, а также призван воздействовать на воображение читателя и выступает в роли спускового крючка для его фантазии.Художественный стиль – это особый стиль речи, который получил широкое распространение как в мировой художественной литературе в целомкопирайтинге в частности. Он характеризуется высокой эмоциональностью, прямой речью, богатством красок, эпитетов и метафор, а также призван воздействовать на воображение читателя и выступает в роли спускового крючка для его фантазии. </p>
+    										</div>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+    										<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    								</div>
+    							</div>
+    							<div class="info-item">
+    								<div class="info-item__title"><img class="loop" src="{% static '/img/loop.png' %}" alt="loop"><img class="loop loop--active" src="{% static '/img/loop-active.png' %}" alt="">Оценка направления индустрии. Выбор игры. <span></span></div>
+    								<div class="info-item__body ">
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    								</div>
+    							</div>
+    							<div class="info-item">
+    								<div class="info-item__title"><img class="loop" src="{% static 'img/loop.png' %}" alt="loop"><img class="loop loop--active" src="{% static '/img/loop-active.png' %}" alt="">Оценка направления индустрии. Выбор игры. <span></span></div>
+    								<div class="info-item__body ">
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="col-sm-3">
+    						<div class="wrap-info wrap-info--1">
+    							<div class="info-item">
+    								<div class="info-item__title"><img class="loop" src="{% static '/img/loop.png' %}" alt="loop"><img class="loop loop--active" src="{% static '/img/loop-active.png' %}" alt="">Оценка направления индустрии. Выбор игры. <span></span></div>
+    								<div class="info-item__body ">
+    									<div class="info-item-in">
+    										<span>1</span><a href="#leson" class="fancybox">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    										<div class="min-les">
+    											<iframe width="160" height="90" src="https://www.youtube.com/embed/W-m5Wq17cp0" frameborder="0" allowfullscreen></iframe>
+    											<p>Художественный стиль – это особый стиль речи, который получил широкое распространение как в мировой художественной литературе в целомкопирайтинге в частности. Он характеризуется высокой эмоциональностью, прямой речью, богатством красок, эпитетов и метафор, а также призван воздействовать на воображение читателя и выступает в роли спускового крючка для его фантазии.Художественный стиль – это особый стиль речи, который получил широкое распространение как в мировой художественной литературе в целомкопирайтинге в частности. Он характеризуется высокой эмоциональностью, прямой речью, богатством красок, эпитетов и метафор, а также призван воздействовать на воображение читателя и выступает в роли спускового крючка для его фантазии. </p>
+    										</div>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    								</div>
+    							</div>
+    							<div class="info-item">
+    								<div class="info-item__title"><img class="loop" src="{% static '/img/loop.png' %}" alt="loop"><img class="loop loop--active" src="{% static '/img/loop-active.png' %}" alt="">Оценка направления индустрии. Выбор игры. <span></span></div>
+    								<div class="info-item__body ">
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    								</div>
+    							</div>
+    							<div class="info-item">
+    								<div class="info-item__title"><img class="loop" src="{% static '/img/loop.png' %}" alt="loop"><img class="loop loop--active" src="{% static '/img/loop-active.png' %}" alt="">Оценка направления индустрии. Выбор игры. <span></span></div>
+    								<div class="info-item__body ">
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="col-sm-3">
+    						<div class="wrap-info wrap-info--1">
+    							<div class="info-item">
+    								<div class="info-item__title"><img class="loop" src="{% static '/img/loop.png' %}" alt="loop"><img class="loop loop--active" src="{% static '/img/loop-active.png' %}" alt="">Оценка направления индустрии. Выбор игры. <span></span></div>
+    								<div class="info-item__body ">
+    									<div class="info-item-in">
+    										<span>1</span><a href="#leson" class="fancybox">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    										<div class="min-les">
+    											<iframe width="160" height="90" src="https://www.youtube.com/embed/W-m5Wq17cp0" frameborder="0" allowfullscreen></iframe>
+    											<p>Художественный стиль – это особый стиль речи, который получил широкое распространение как в мировой художественной литературе в целомкопирайтинге в частности. Он характеризуется высокой эмоциональностью, прямой речью, богатством красок, эпитетов и метафор, а также призван воздействовать на воображение читателя и выступает в роли спускового крючка для его фантазии.Художественный стиль – это особый стиль речи, который получил широкое распространение как в мировой художественной литературе в целомкопирайтинге в частности. Он характеризуется высокой эмоциональностью, прямой речью, богатством красок, эпитетов и метафор, а также призван воздействовать на воображение читателя и выступает в роли спускового крючка для его фантазии. </p>
+    										</div>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    								</div>
+    							</div>
+    							<div class="info-item">
+    								<div class="info-item__title"><img class="loop" src="{% static '/img/loop.png' %}" alt="loop"><img class="loop loop--active" src="{% static '/img/loop-active.png' %}" alt="">Оценка направления индустрии. Выбор игры. <span></span></div>
+    								<div class="info-item__body ">
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    								</div>
+    							</div>
+    							<div class="info-item">
+    								<div class="info-item__title"><img class="loop" src="{% static 'img/loop.png' %}" alt="loop"><img class="loop loop--active" src="{% static 'img/loop-active.png' %}" alt="">Оценка направления индустрии. Выбор игры. <span></span></div>
+    								<div class="info-item__body ">
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="col-sm-3">
+    						<div class="wrap-info wrap-info--1">
+    							<div class="info-item">
+    								<div class="info-item__title"><img class="loop" src="{% static '/img/loop.png' %}" alt="loop"><img class="loop loop--active" src="{% static '/img/loop-active.png' %}" alt="">Оценка направления индустрии. Выбор игры. <span></span></div>
+    								<div class="info-item__body ">
+    									<div class="info-item-in">
+    										<span>1</span><a href="#leson" class="fancybox">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    										<div class="min-les">
+    											<iframe width="160" height="90" src="https://www.youtube.com/embed/W-m5Wq17cp0" frameborder="0" allowfullscreen></iframe>
+    											<p>Художественный стиль – это особый стиль речи, который получил широкое распространение как в мировой художественной литературе в целомкопирайтинге в частности. Он характеризуется высокой эмоциональностью, прямой речью, богатством красок, эпитетов и метафор, а также призван воздействовать на воображение читателя и выступает в роли спускового крючка для его фантазии.Художественный стиль – это особый стиль речи, который получил широкое распространение как в мировой художественной литературе в целомкопирайтинге в частности. Он характеризуется высокой эмоциональностью, прямой речью, богатством красок, эпитетов и метафор, а также призван воздействовать на воображение читателя и выступает в роли спускового крючка для его фантазии. </p>
+    										</div>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    								</div>
+    							</div>
+    							<div class="info-item">
+    								<div class="info-item__title"><img class="loop" src="{% static '/img/loop.png' %}" alt="loop"><img class="loop loop--active" src="{% static '/img/loop-active.png' %}" alt="">Оценка направления индустрии. Выбор игры. <span></span></div>
+    								<div class="info-item__body ">
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    								</div>
+    							</div>
+    							<div class="info-item">
+    								<div class="info-item__title"><img class="loop" src="{% static '/img/loop.png' %}" alt="loop"><img class="loop loop--active" src="{% static '/img/loop-active.png' %}" alt="">Оценка направления индустрии. Выбор игры. <span></span></div>
+    								<div class="info-item__body ">
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+    										<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Рекомендованные статьи</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    									<div class="info-item-in">
+    										<span>1</span><a href="#">Через магазины <br>и торговые площадки</a>
+											<button><img src="{% static '/img/lock.png' %}" alt="lock"></button>
+											<button><img src="{% static '/img/link.png' %}" alt="link"></button>
+    									</div>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="wrap-large">
+
+    			</div>
+    		</section>
+    	</main>
+    	<div class="hidden">
+    		<div class="modal modal-leson leson" id="leson">
+    			<h2>Выбор игры через игровые площадки <span>1</span> <button><img src="{% static 'img/link.png' %}" alt="link"></button></h2>
+    			<div class="leson-wrap">
+    				<div class="leson__video"><iframe width="480" height="300" src="https://www.youtube.com/embed/W-m5Wq17cp0" frameborder="0" allowfullscreen></iframe></div>
+    				<div class="leson__info">
+    					<div class="leson__date"><span>Создан: 23.03.2017</span> <span>Обновлен: 23.03.2017</span></div>
+    					<p>Как уже было сказано выше, художественный стиль наиболее часто используется в художественной литературе: романах, новеллах, рассказах, повестях и прочих литературных жанрах. Этому стилю не присущи оценочные суждения: </p>
+    					<ul>
+    						<li>- сухость</li>
+    						<li>- официальность</li>
+    					</ul>
+    					<p>которые свойственны научному и официально-деловому стилям. Вместо этого для него характеры повествование и передача мельчайших деталей, чтобы сформировать в воображении </p>
+    				</div>
+    				<p>Как уже было сказано выше, художественный стиль наиболее часто используется в художественной литературе: романах, новеллах, рассказах, повестях и прочих литературных жанрах. Этому стилю не присущи оценочные суждения, сухость и официальность, которые свойственны научному и официально-деловому стилям. Вместо этого для него характеры повествование и передача мельчайших деталей, чтобы сформировать в воображении читателя филигранную форму передаваемой мысли.</p>
+    			</div>
+    			<div class="comment-write">
+    				<textarea placeholder="Написать комментарий...">Написать комментарий...</textarea>
+    				<div class="avatar"><img src="" alt=""></div>
+    				<div class="comment-bar">
+    					<div class="add-file">
+    						<button><img src="{% static '/img/photo-add.png' %}" alt="add"></button>
+    						<button><img src="{% static '/img/video-add.png' %}" alt="add"></button>
+    					</div>
+    					<button class="send-comment">Отправить</button>
+    				</div>
+    			</div>
+    			<div class="coments-read">
+    				<div class="coment">
+    					<div class="coment__ava"><img src="" alt=""></div>
+    					<div class="coment__info">
+    						<b>Татьяна Сибелиус</b> <div class="coment__date">23.10.2017 в 11:00</div>
+    						<p>Какой крутой урок, я просто в восторге! С помощью этого расширения, разработанного командой Google Переводчика, можно быстро переводить веб-страницы.</p>
+    					</div>
+    				</div>
+    				<div class="coment">
+    					<div class="coment__ava"><img src="" alt=""></div>
+    					<div class="coment__info">
+    						<b>Татьяна Сибелиус</b> <div class="coment__date">23.10.2017 в 11:00</div>
+    						<p>Какой крутой урок, я просто в восторге! С помощью этого расширения, разработанного командой Google Переводчика, можно быстро переводить веб-страницы.</p>
+    					</div>
+    				</div>
+    				<div class="coment">
+    					<div class="coment__ava"><img src="" alt=""></div>
+    					<div class="coment__info">
+    						<b>Татьяна Сибелиус</b> <div class="coment__date">23.10.2017 в 11:00</div>
+    						<p>Какой крутой урок, я просто в восторге! С помощью этого расширения, разработанного командой Google Переводчика, можно быстро переводить веб-страницы.</p>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+{% endblock%}
+</body>
+</html>

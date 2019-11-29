@@ -1,0 +1,256 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    {% load static %}
+	<meta property="og:image" content="{% static 'path/to/image.jpg' %}">
+	<link rel="shortcut icon" href="{% static 'img/favicon/favicon.ico' %}" type="image/x-icon">
+	<link rel="apple-touch-icon" href="{% static 'img/favicon/apple-touch-icon.png' %}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/favicon/apple-touch-icon-72x72.png' %}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/favicon/apple-touch-icon-114x114.png' %}">
+	<meta name="theme-color" content="#000">
+	<meta name="msapplication-navbutton-color" content="#000">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '/css/jquery.fancybox.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '/css/site.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '/css/main.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '/css/slick.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '/css/cabinet.css' %}" type="text/css">
+    <!-- <title>54</title> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    {% block head %}
+
+    {% endblock %}
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__menu">
+                <div class="logo-mob"><img src="{% static '/img/logo.png' %}" alt="logo"></div>
+                <div class="burger">
+                    <button>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <ul>
+                    <li class="line-link"><a href="/">Главная</a></li>
+
+                    {% if user.is_authenticated %}
+                    {% if request.user.is_superuser == True %}
+                    <li class="line-link"><a href="/admin">Админ панель</a></li>
+                    <li ><a href="/logout">Выход</a></li>
+                    {% else %}
+                    <li class="line-link"><a href="/cabinet">Личный кабинет</a></li>
+                    <li ><a href="/logout">Выход</a></li>
+                    {% endif %}
+                    {% else %}
+                    <li ><a href="#reg" class="fancybox">Вход/Регистрация</a></li>
+                    {% endif %}
+                    <li class="logo"><a href="/"><img src="{% static '/img/logo.png' %}" alt="logo"></a></li>
+                    <li class="line-link"><a href="/packets">Пакеты</a></li>
+                    <li class="news-btn-1"><a href="/news" class="news-btn">Новости </a><span>12</span>
+                        <div class="fanc-wrap">
+
+                            <div class="news-box">
+                                <div class="news-box__item">
+                                    <div class="news-box__info">
+                                        <h4>Новость</h4>
+                                        <p>здесь будет описание новости 1 здесь будет описание новости </p>
+                                    </div>
+                                    <div class="go-news">
+                                        <a href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="news-box__item news-box__item--priority">
+                                    <div class="news-box__info">
+                                        <h4>Приоритетная новость с длинным заголовком </h4><span>1</span>
+                                        <p>Художественный стиль – это особый стиль речи, который получил широкое распространение как в мировой художественной литературе в целом, так и в копирайтинге в частности. Он характеризуется высокой эмоциональностью, </p>
+                                    </div>
+                                    <div class="go-news">
+                                        <a href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="news-box__item">
+                                    <div class="news-box__info">
+                                        <h4>Новость</h4>
+                                        <p>здесь будет описание новости 1 здесь будет описание новости </p>
+                                    </div>
+                                    <div class="go-news">
+                                        <a href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="all-news">
+                                    <a href="/news">Смотреть все</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- <div class="modal modalreg" id="reg">
+        <ul class="tabs-list1">
+            <li class="tabs-list__item1 "><button type="button" data-content="content11">Вход</button></li>
+            <li class="tabs-list__item1 tabs-list__item_active1"><button type="button" data-content="content12">Регистрация</button></li>
+        </ul>
+        <div class="tabs__content1 " id="content11">
+            <div class="enter-form">
+                <form>
+                    <p>
+                        <img src="{% static '/img/form-ico1.jpg'%}" alt="ico">
+                        <span>Логин</span>
+                        <input type="text" placeholder="Введите логин">
+                    </p>
+                    <p>
+                        <img src="{% static '/img/form-ico3.jpg' %}" alt="ico">
+                        <span>Пароль</span>
+                        <input type="text" placeholder="Введите Пароль">
+                    </p>
+                    <button>Вход</button>
+                </form>
+            </div>
+        </div>
+        <div class="tabs__content1 tabs__content_active1" id="content12">
+            <div class="enter-form">
+                <form>
+                    <p>
+                        <img src="{% static '/img/form-ico1.jpg' %}" alt="ico">
+                        <span>Логин</span>
+                        <input type="text" placeholder="Введите логин">
+                    </p>
+                    <p>
+                        <img src="{% static '/img/form-ico2.jpg' %}" alt="ico">
+                        <span>E-mail</span>
+                        <input type="text" placeholder="Введите E-mail">
+                    </p>
+                    <p>
+                        <img src="{% static '/img/form-ico3.jpg' %}" alt="ico">
+                        <span>Пароль</span>
+                        <input type="text" placeholder="Введите Пароль">
+                    </p>
+                    <button>Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div> -->
+{% block body %}
+{% endblock %}
+<footer class="footer">
+    <div class="container">
+        <div class="footer__left">
+            <h4>Обращайтесь по всем вопросам по этим контактам:</h4>
+            <p>
+                <span>Телефон: {{profileroot.phone}}</span>
+                <span>E-mail: test@gmail.com</span>
+                <span class="soc">
+                    <a href="{{profileroot.vk}}" target="_blank"><img src="{% static '/img/soc-ico1.png' %}" alt="soc"></a>
+                    <a href="{{profileroot.fb}}" target="_blank"><img src="{% static '/img/soc-ico2.png' %}" alt="soc"></a>
+                </span>
+            </p>
+            <p><a href="http://vectre.co" target="_blank">{{profileroot.siteaddress}}</a></p>
+        </div>
+        <div class="footer__right">
+            <div class="footer__logo"><a href="#"><img src="{% static '/img/logo-bot.png' %}" alt="logo bot"></a></div>
+            <p>(c) 2017	<br>Все права защищены</p>
+        </div>
+    </div>
+</footer>
+<div class="modal modal--reg" id="reg">
+    <ul class="tabs-list1">
+        <li class="tabs-list__item1 "><button type="button" data-content="content11">Вход</button></li>
+        <li class="tabs-list__item1 tabs-list__item_active1"><button type="button" data-content="content12">Регистрация</button></li>
+    </ul>
+    <div class="tabs__content1 " id="content11">
+        <div class="enter-form">
+            <div id="login">
+                <form class="form-horizontal" name="LoginForm" action="/login/" method="post">
+                {% csrf_token %}
+                {% if next %}
+                    <input type="hidden" name="next" value="{{ next }}" />
+                {% endif %}
+                {% if form.errors %}
+                      <p class="alert alert-danger">
+                         Upps, Username and Password didn't match!
+                      </p>
+                  {% endif %}
+
+                <div class="control-group">
+                    <img src="{% static '/img/form-ico1.jpg' %}" alt="ico">
+                    <span>Логин</span><br>
+                    <div class="controls">
+                        <input type="text" id="username" name="username"  placeholder="Логин">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <img src="{% static '/img/form-ico3.jpg' %}" alt="ico">
+                    <span>Пароль</span><br>
+                    <div class="controls">
+                        <input type="password" name="password" id="password" placeholder="Пароль">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <button type="submit" class="btn">Вход</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__content1 tabs__content_active1" id="content12">
+        <div class="enter-form">
+            {% if messages %}
+        <div class="messages alert alert-success">
+            {% for message in messages %}
+            <div{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+            <form method="post">
+              {% csrf_token %}
+              {% for field in form %}
+                <p>
+                    {% if field.name == "username" %}
+                    <img src="{% static '/img/form-ico1.jpg' %}" alt="ico">
+                    <span>Логин</span><br>
+                    {% endif %}
+
+                    {% if field.name == "email" %}
+                    <img src="{% static '/img/form-ico2.jpg' %}" alt="ico">
+                    <span>E-mail</span><br>
+                    {% endif %}
+
+                    {% if field.name == "password1" %}
+                    <img src="{% static '/img/form-ico3.jpg' %}" alt="ico">
+                    <span>Пароль</span><br>
+                    {% endif %}
+                  {{ field }}
+
+                  {% for error in field.errors %}
+                    <p style="color: red">{{ error }}</p>
+                  {% endfor %}
+                </p>
+              {% endfor %}
+              <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="{% static '/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static '/js/jquery.fancybox.min.js' %}"></script>
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
+<script src="{% static '/js/bootstrap.min.js' %}"></script>
+<script src="{% static '/js/common.min.js' %}"></script>
+<script src="{% static '/js/cabinet.js' %}"></script>
+</body>
+</html>
